@@ -486,8 +486,8 @@ contract MicinToken is Context, IERC20, Ownable {
 		_devFee = _DexFee;
 		_previousDevFee = _devFee;
         _previousLiquidityFee = _lpFee;
-        _maxTxAmount = * 10 ** _decimals;
-        numTokensSellToAddToLiquidity = * 10 ** _decimals;
+        _maxTxAmount = (_tTotal) * 10 ** _decimals;
+        numTokensSellToAddToLiquidity = (_tTotal) * 10 ** _decimals;
         _devWalletAddress = feeaddress;
         
         _rOwned[tokenOwner] = _rTotal;
