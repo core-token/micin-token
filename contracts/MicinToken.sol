@@ -473,7 +473,7 @@ contract MicinToken is Context, IERC20, Ownable {
         inSwapAndLiquify = false;
     }
     
-    constructor (string memory _NAME, string memory _SYMBOL, uint256 _DECIMALS, uint256 _supply, uint256 _txFee,uint256 _lpFee,uint256 _DexFee,address routerAddress,address feeaddress,address tokenOwner,address service) public payable {
+    constructor (string memory _NAME, string memory _SYMBOL, uint256 _DECIMALS, uint256 _supply, uint256 _txFee,uint256 _lpFee,uint256 _DevFee,address routerAddress,address feeaddress,address tokenOwner,address service) public payable {
         _name = _NAME;
         _symbol = _SYMBOL;
         _decimals = _DECIMALS;
@@ -483,7 +483,7 @@ contract MicinToken is Context, IERC20, Ownable {
         _liquidityFee = _lpFee;
         _previousTaxFee = _txFee;
 		
-		_devFee = _DexFee;
+		_devFee = _DevFee;
 		_previousDevFee = _devFee;
         _previousLiquidityFee = _lpFee;
         _maxTxAmount = (_tTotal) * 10 ** _decimals;
